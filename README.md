@@ -3,6 +3,7 @@
 A full-stack student registration system with a FastAPI backend and HTML frontend.
 
 ## Features
+
 - Student registration and management
 - PostgreSQL database for data persistence
 - RESTful API with FastAPI
@@ -12,6 +13,7 @@ A full-stack student registration system with a FastAPI backend and HTML fronten
 ## Local Development
 
 ### Prerequisites
+
 - Docker and Docker Compose
 - Python 3.10+
 
@@ -22,6 +24,7 @@ docker-compose up --build
 ```
 
 The application will be available at:
+
 - **Frontend**: http://localhost (port 80)
 - **API**: http://localhost:8000 (port 8000)
 - **Database**: PostgreSQL on port 5433
@@ -29,9 +32,11 @@ The application will be available at:
 ### API Endpoints
 
 #### POST /students/
+
 Register a new student.
 
 Request:
+
 ```json
 {
   "name": "John Doe",
@@ -41,6 +46,7 @@ Request:
 ```
 
 Response:
+
 ```json
 {
   "id": 1,
@@ -51,9 +57,11 @@ Response:
 ```
 
 #### GET /students/
+
 Retrieve all registered students.
 
 Response:
+
 ```json
 [
   {
@@ -103,12 +111,14 @@ This project is configured for deployment on Render using `render.yaml`:
 - `DATABASE_URL`: PostgreSQL connection string
 
 ## Backend Stack
+
 - FastAPI
 - SQLAlchemy ORM
 - PostgreSQL
 - Pydantic for validation
 
 ## Frontend
+
 - HTML5
 - Responsive design
 - Fetch API for backend communication

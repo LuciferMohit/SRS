@@ -218,7 +218,22 @@
     </div>
 
     <script>
-        const API_URL = 'http://localhost:8000/students/';
+        // Dynamically set API URL based on environment
+        const getAPIUrl = () => {
+            const hostname = window.location.hostname;
+            
+            // Local development
+            if (hostname === 'localhost' || hostname === '127.0.0.1') {
+                return 'http://localhost:8000/students/';
+            }
+            
+            // Production on Render or similar
+            // Replace 'student-frontend' with 'student-api' in the URL
+            const apiUrl = window.location.origin.replace('student-frontend', 'student-api');
+            return apiUrl + '/students/';
+        };
+        
+        const API_URL = getAPIUrl();
 
         async function loadStudents() {
             try {

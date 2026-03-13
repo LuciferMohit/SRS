@@ -1,0 +1,16 @@
+.git
+.gitignore
+.vscode
+.DS_Store
+*.log
+*.env
+__pycache__
+*.pyc
+.pytest_cache
+.coverage
+.venv
+venv
+node_modules
+pgdata
+README.md
+SRS.html

@@ -22,7 +22,7 @@ services:
       - path: /
         destination: /index.html
 
-  - type: pgsql
+  - type: postgres
     name: student-db
     plan: free
     version: 15
